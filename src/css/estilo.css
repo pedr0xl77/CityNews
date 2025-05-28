@@ -1,0 +1,56 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: transparent;
+}
+
+#container{
+    display: grid;
+    grid-template-areas: 
+    "header header header"
+    "section section section"
+    "footer footer footer";
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 10px;
+    padding: 10px;
+}
+
+header{
+    /*  */
+    justify-content:space-between;
+    /* esse comando deixar alinhado em um linha so */
+    display: flex;
+    /*  */
+    align-items: center;
+    background-color: burlywood;
+}
+
+header h1{
+    text-align: left;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: chocolate;
+}
+
+header h2{
+    color: blueviolet;
+    
+}
+header ul nav{
+    gap:100px;
+    display: flex;
+    padding: 10px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+
+article{
+    grid-area:section;   
+}
+
+.manchete{
+    padding: 10px;
+}
