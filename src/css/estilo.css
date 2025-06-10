@@ -65,6 +65,9 @@ header nav ul a{
 
 
 .manchete-cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     width: 100%;
     height: fit-content;
     display: grid;
@@ -75,7 +78,17 @@ header nav ul a{
     padding: 10px;
 }
 
+@media (max-swidth: 768px) {
+    .manchete-cards{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
+}
+
 .manchete{
+    flex: 1 1 22%;
+    min-width: wrap;
    width: 100%;
    height: 400px;
    background-color: var(--color-4);
@@ -87,13 +100,21 @@ header nav ul a{
    border-radius: 10px;
    /* primeiro valor deslocamento horizontal, segundo valor deslocamento vertical, terceiro valor espalhamento, quarto valor cor da sombra*/
    box-shadow: 2px 2px 3px black;
-   
 }
-
 
  .manchete p{
     text-align: center;
  }
+
+
+
+ .manchete .games{
+   color: yellow;
+ }
+
+
+
+
 
  .manchete .image-container{
     /* fit-content faz o elemento pai se adapitar ao tamnho do elemento filho */
@@ -104,20 +125,39 @@ header nav ul a{
     position: relative;
  }
 
-.manchete .image-container::before{
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #00000080;
-}
+
 
 .manchete .image-container img{
     width: 300px;
     height: 300px;
     object-fit: cover;
+}
+
+.materia{
+    padding: 10px;
+    background-color: var(--color-3);
+    color: var(--color-4);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+   width: fit-content;
+   height: fit-content;
+   overflow: hidden;
+   position: relative;
+}
+
+.materia .image-container{
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    background-color: var(--color-1);
+    box-shadow: 2px 2px 3px black;
+
+}
+
+.materia .image-container img{
+    width: 100%;
+    height: 300px;
 }
 
 footer{
@@ -127,7 +167,7 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--color-3);
+    background-color: var(--color-2);
     border-top: 1px solid var(--color-4);
     color: var(--color-1);
 }
